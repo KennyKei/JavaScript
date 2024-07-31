@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horário</title>
+</head>
+<body>
+    <h1>Hora certa</h1>
+    <h3 id="atual">Agora são: </h3>
+    <input type="button" value="verificar" onclick="verificar()">
+    <div id="area" onclick="verificar()">
+        Clique!
+    </div>
+    <script>
+        var area= document.getElementById('area')
+        var atual=document.getElementById('atual')
+
+        function verificar()
+        {
+            var data_atual = new Date()
+            var hora = data_atual.getHours()
+            var min = data_atual.getMinutes()
+            var sec = data_atual.getSeconds()
+
+            atual.innerText = `Agora são ${hora}:${min}:${sec}`
+
+            if (hora < 12)
+            {
+                area.innerText = 'Bom dia'
+            }
+            else if (hora < 18)
+            {
+                area.innerText = 'Boa tarde'
+            }
+            else
+            {
+                area.innerText = 'Boa noite'
+            }
+                
+        }
+
+    </script>
+</body>
+</html>

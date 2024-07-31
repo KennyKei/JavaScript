@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div#area
+        {
+            margin-top: 20px;
+            font: normal 20pt arial;
+            background-color: aqua;
+            color: black;
+            width: 400px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dias da semana</h1>
+    selecione o dia em número: </br>
+    <input type="number" id="txtDiaSemana">
+    <div id="area" onclick="verificar()" onkeypress="enter()"></div>
+
+    <script>
+        /*
+        0 - domingo
+        1 - segunda
+        2 - terça
+        3 - quarta
+        4 - quinta
+        5 - sexta
+        6 - sabado
+        */
+
+        function verificar()
+        {
+            var div = document.getElementById('area')
+            var diaSelecionado = document.getElementById('txtDiaSemana')
+            var dia = Number(diaSelecionado.value)
+
+            switch(dia)
+            {
+                case 0:
+                    div.innerText = 'Domingo'
+                    break
+                case 1:
+                    div.innerText = 'Segunda'
+                    break
+                case 2:
+                    div.innerText = 'Terça'
+                    break
+                case 3:
+                    div.innerText = 'Quarta'
+                    break
+                case 4:
+                    div.innerText = 'Quinta'
+                    break
+                case 5:
+                    div.innerText = 'Sexta'
+                    break
+                case 6:
+                    div.innerText = 'Sabado'
+                    break
+
+
+            }
+        }
+    </script>
+</body>
+</html>
