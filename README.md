@@ -1,2 +1,2 @@
 # JavaScript
-Repositório para estudos e projetos focado em javascript 
+Repositório para estudos e projetos javascript 
